@@ -12,12 +12,33 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UidaiAdharUpdate">
         <activity
+            android:name=".otpActivity2"
+            android:exported="true" />
+
+        <activity
+            android:name=".Addressaprove"
+            android:exported="true"
+            android:parentActivityName=".residentlogin" />
+        <activity
+            android:name=".residentlogin"
+            android:exported="true"
+            android:parentActivityName=".HomeActivity" />
+        <activity
+            android:name=".AddressUpdate"
+            android:exported="true"
+            android:parentActivityName=".MainActivity" />
+        <activity
             android:name=".otpActivity"
             android:exported="true"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:parentActivityName=".HomeActivity"/>
+        <activity
+            android:name=".HomeActivity"
+            android:exported="true" >
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

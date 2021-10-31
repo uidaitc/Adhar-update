@@ -4,9 +4,15 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/COURSES/Android/Projects/Dristii/UidaiAdharUpdate/app/src/main/res/drawable/bg1.xml" value="0.146875" />
+        <entry key="..\:/COURSES/Android/Projects/Dristii/UidaiAdharUpdate/app/src/main/res/drawable/bg2.xml" value="0.146875" />
         <entry key="..\:/COURSES/Android/Projects/Dristii/UidaiAdharUpdate/app/src/main/res/drawable/card_bg_4.xml" value="0.146875" />
-        <entry key="..\:/COURSES/Android/Projects/Dristii/UidaiAdharUpdate/app/src/main/res/layout/activity_main.xml" value="0.14666666666666667" />
-        <entry key="..\:/COURSES/Android/Projects/Dristii/UidaiAdharUpdate/app/src/main/res/layout/activity_otp.xml" value="0.16666666666666666" />
+        <entry key="..\:/COURSES/Android/Projects/Dristii/UidaiAdharUpdate/app/src/main/res/layout/activity_address_update.xml" value="0.12" />
+        <entry key="..\:/COURSES/Android/Projects/Dristii/UidaiAdharUpdate/app/src/main/res/layout/activity_addressaprove.xml" value="0.16666666666666666" />
+        <entry key="..\:/COURSES/Android/Projects/Dristii/UidaiAdharUpdate/app/src/main/res/layout/activity_home.xml" value="0.3333333333333333" />
+        <entry key="..\:/COURSES/Android/Projects/Dristii/UidaiAdharUpdate/app/src/main/res/layout/activity_main.xml" value="0.16666666666666666" />
+        <entry key="..\:/COURSES/Android/Projects/Dristii/UidaiAdharUpdate/app/src/main/res/layout/activity_otp.xml" value="0.14666666666666667" />
+        <entry key="..\:/COURSES/Android/Projects/Dristii/UidaiAdharUpdate/app/src/main/res/layout/activity_otp2.xml" value="0.134765625" />
+        <entry key="..\:/COURSES/Android/Projects/Dristii/UidaiAdharUpdate/app/src/main/res/layout/activity_residentlogin.xml" value="0.134765625" />
       </map>
     </option>
   </component>

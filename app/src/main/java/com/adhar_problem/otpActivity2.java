@@ -12,7 +12,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -23,11 +22,9 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.Console;
 import java.util.HashMap;
-import java.util.Map;
 
-public class otpActivity extends AppCompatActivity {
+public class otpActivity2 extends AppCompatActivity {
     android.widget.Button confirmOtp;
     EditText otpInput;
     TextView msg;
@@ -35,6 +32,8 @@ public class otpActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_otp2);
+
         setContentView(R.layout.activity_otp);
         confirmOtp=findViewById(R.id.confirmOtp);
         otpInput=findViewById(R.id.otpInput);
@@ -44,7 +43,6 @@ public class otpActivity extends AppCompatActivity {
         String TxnID=intent.getStringExtra("TxnId");
         String UID=intent.getStringExtra("uid_number");
         String shareCode="1234";
-
 
         //Confirm Button event
         confirmOtp.setOnClickListener(new View.OnClickListener() {
@@ -57,20 +55,19 @@ public class otpActivity extends AppCompatActivity {
 
             }
         });
-    }
 
-    public void ConfirmOtp(String otp,String TxnId, String Uid, String shareCode){
+
+    }
+    public void ConfirmOtp(String otp,String TxnId, String Uid, String shareCode) {
 
         RequestQueue queue = Volley.newRequestQueue(this);
         // Post params to be sent to the server
         HashMap<String, String> params = new HashMap<String, String>();
 
         params.put("txnNumber", TxnId);
-        params.put("otp",otp);
-        params.put("shareCode",shareCode);
+        params.put("otp", otp);
+        params.put("shareCode", shareCode);
         params.put("uid", Uid);
-
-
 
 
         String url = "https://stage1.uidai.gov.in/eAadhaarService/api/downloadOfflineEkyc";
@@ -82,19 +79,19 @@ public class otpActivity extends AppCompatActivity {
                     public void onResponse(JSONObject response) {
 
                         try {
-                            String eKycXMl=response.getString("eKycXML");
-                            String fileName=response.getString("fileName");
-                            String status=response.getString("status");
-                            Log.i("ekycXML",eKycXMl);
-                            Log.i("Status",status);
-                            Log.i("fileName",fileName);
+                            String eKycXMl = response.getString("eKycXML");
+                            String fileName = response.getString("fileName");
+                            String status = response.getString("status");
+                            Log.i("ekycXML", eKycXMl);
+                            Log.i("Status", status);
+                            Log.i("fileName", fileName);
 
                             //start 3rd screen
                             msg.setVisibility(View.VISIBLE);
                             msg.setText("OPT validated successfully");
 
-                            Intent otpActivity = new Intent(otpActivity.this,AddressUpdate.class);
-                            otpActivity.putExtra("UID",Uid);
+                            Intent otpActivity = new Intent(otpActivity2.this, Addressaprove.class);
+                            otpActivity.putExtra("UID", Uid);
 
                             startActivity(otpActivity);
 
@@ -117,7 +114,6 @@ public class otpActivity extends AppCompatActivity {
             }
         });
         queue.add(stringRequest);
-
-
     }
+
 }
